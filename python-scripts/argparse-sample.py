@@ -4,6 +4,7 @@
 # https://docs.python.org/3/library/argparse.html
 
 import argparse
+import sys
 
 """
    1 Require a filename argument, so it knows what file to read.
@@ -24,12 +25,13 @@ parser.add_argument('--version', '-v', action='version', version='%(prog)s 1.0')
 args = parser.parse_args()
 print(args)
 
-# handle the error
+# handle the error     https://docs.python.org/3/reference/compound_stmts.html#the-try-statement
 try:
     f = open(args.filename)
     limit = args.limit 
 except FileNotFoundError as err:
     print(f"Error: {err}")
+    sys.exit(2)
 except:
     print('Error occured')
 else:
