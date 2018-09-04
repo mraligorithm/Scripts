@@ -1,0 +1,7 @@
+"""
+   1 Require a filename argument, so it knows what file to read.
+   2 Print the contents of the file backward (bottom of the script first, each line printed backward)
+   3 Provide help text and documentation when it receives the --help flag.
+   4 Accept an optional --limit or -l flag to specify how many lines to read from the file.
+   5 Accept a --version flag to print out the current version of the tool.
+"""
